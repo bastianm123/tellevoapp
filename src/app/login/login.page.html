@@ -1,0 +1,31 @@
+
+<ion-content>
+  <div class="container">
+    <img src="https://seeklogo.com/images/D/duoc-uc-logo-F1437952BE-seeklogo.com.png">
+  </div>
+  <h1 class="inicio">Inicia Sesion</h1>
+  <ion-card >
+    <ion-card-content>
+      <ion-item lines="full">
+        <ion-label position="stacked" >Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="user.usuario" ><ion-icon name="person-circle-outline" style="font-size:35px; padding:5px; float:left"></ion-icon></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="stacked">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="user.password"><ion-icon name="key-outline" style="font-size:35px; padding:5px; float:left"></ion-icon></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" (click)="ingresar()" style="color: black">Ingresar</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" fill="clear" style="font-size:small; color: blue; text-transform:none;" [routerLink]="['/restablecer']">
+            <p>Recuperar contraseña</p> 
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
