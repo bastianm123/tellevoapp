@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
-import { ToastController,LoadingController} from '@ionic/angular';
+import { ToastController, LoadingController } from '@ionic/angular';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ServicesService } from '../services/services.service';
+import { Alumno } from '../ialumnos';
 
 @Component({
   selector: 'app-login',
@@ -10,23 +11,19 @@ import { ServicesService } from '../services/services.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  data:any;
-  alumnos={
-  };
-  users:any;
-  user={
+  correcto : boolean;
+  data: any;
+  alumnos: Alumno[]=[];
+  alumno: Alumno;
+  users: any;
+  user = {
     usuario: "",
-    password:""
+    password: ""
   }
-  field:string="";
-  constructor(private router: Router, public toastController: ToastController,private loadingCtrl: LoadingController,private http: HttpClient,private api: ServicesService) {
-   }
+  field: string = "";
+  constructor(private router: Router, public toastController: ToastController, private loadingCtrl: LoadingController, private http: HttpClient, private api: ServicesService) {
+  }
 
-  
-   logForm() {
-    
-    console.log(this.alumnos)
-  }
   async showLoading() {
     const loading = await this.loadingCtrl.create({
       message: 'Ingresando...',
@@ -37,10 +34,14 @@ export class LoginPage implements OnInit {
   }
   ngOnInit() {
   }
-  ingresar(){
-    if (this.validateModel(this.user)){
+
+  ingresar() {
+    if (this.validateModel(this.user)) {
       this.logForm()
-      this.presentToast("Bienvenido "+ this.user.usuario)
+      console.log(this.alumno)
+      if(this.correcto == true){
+        this.presentToast("Bienvenido " + this.user.usuario)
+        this.correcto=false;
       let navigationExtras: NavigationExtras = {
         state: {
           user: this.user
@@ -49,47 +50,42 @@ export class LoginPage implements OnInit {
       this.showLoading()
       setTimeout(() => {
         console.log('sleep');
-        this.router.navigate(['/home'] , navigationExtras );
+        this.router.navigate(['/home'], navigationExtras);
       }, 1900);
-      
-    }else{
-      this.presentToast("Falta ingresar: "+ this.field, 4500);
+
+      }
+    } else {
+      this.presentToast("Falta ingresar: " + this.field, 4500);
     }
   }
-  validateModel(model:any){
-    for (var[key,value] of Object.entries(model)){
-      if(value == ""){
+  validateModel(model: any) {
+    for (var [key, value] of Object.entries(model)) {
+      if (value == "") {
         this.field = key;
         return false;
       }
     }
     return true;
   }
-  async presentToast(msg: string,duracion?: number){
+  async presentToast(msg: string, duracion?: number) {
     const toast = await this.toastController.create({
       message: msg,
       duration: duracion ? duracion : 2000
     });
     toast.present()
   }
-  ionViewWillEnter(){
-    this.getUsers();
-  }
   
-  getUser(userId){
-    this.api.getUser(userId).subscribe((data)=>{
-      console.log(data)
-      this.alumnos=data;
+  logForm() {
+    this.api.getUsuarios().subscribe(resp => {
+      this.alumnos.push(...resp.alumnos);
+      const existe = this.alumnos.find(a => a.username === this.user.usuario && a.password === this.user.password);
+      if (existe) {
+        this.alumno= existe;
+        this.correcto=true;
+      }
+      else{
+        this.correcto=false;
+      }
     });
-  }
-  getUsers(){
-    this.api.getUsers().subscribe((data)=>{
-      this.alumnos=data;
-    });
-  }
-  getDatos(userId,username){
-    this.api.getDatos(userId,username).subscribe((data)=>{
-      this.alumnos=data;
-    })
   }
 }
