@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { RestablecerPageRoutingModule } from './restablecer-routing.module';
 
 import { RestablecerPage } from './restablecer.page';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RestablecerPageRoutingModule
+    RestablecerPageRoutingModule,
+    RecaptchaModule
   ],
   declarations: [RestablecerPage]
 })

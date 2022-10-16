@@ -1,9 +1,24 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>restablecer</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+<ion-content [fullscreen] = "true">
+  
+  <div class="container">
+    <img src="https://seeklogo.com/images/D/duoc-uc-logo-F1437952BE-seeklogo.com.png">
+  </div>
+  <h1 class="inicio">Recuperar Contraseña</h1>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input type="text" [(ngModel)]="email.email" placeholder="ba.munozs@duocuc.cl"><ion-icon style="font-size: 25px; padding: 2px" name="mail-outline"></ion-icon></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <div class="captcha">
+    <re-captcha  (resolved)="captchaResolved($event)" [siteKey]="siteKey"></re-captcha>
+  </div>
+  <ion-row>
+    <ion-col>
+      <ion-button color="success" expand="full" (click)="correcto()">Enviar</ion-button>
+    </ion-col>
+  </ion-row>
+  
 </ion-content>

@@ -1,0 +1,184 @@
+{
+    "alumnos": [
+      {
+        "id": 1,
+        "nombre": "JOSE ALVAREZ DIAZ",
+        "username": "jos.alvarezd",
+        "password": "123456"      
+      },
+      {
+        "id": 2,
+        "nombre": "DIEGO IGNACIO ARANDA GONZALEZ",
+        "username": "di.arandag",
+        "password": "123456"     
+      },
+      {
+        "id": 3,
+        "nombre": "NICOLAS IGNACIO AVILA CAMPOS",
+        "username": "ni.avilac",
+        "password": "123456"     
+      },
+      {
+        "id": 4,
+        "nombre": "SEBASTIAN ALEXANDER BERRIOS GONZALEZ",
+        "username": "seb.berrios",
+        "password": "123456"     
+      },
+      {
+        "id": 5,
+        "nombre": "NICOLAS ANDRES BRICENO CARQUIN",
+        "username": "ni.briceno",
+        "password": "123456"
+      },
+      {
+        "id": 6,
+        "nombre": "NICOLAS ENRIQUE CAÑAS ARRIAGADA",
+        "username": "nic.canas",
+        "password": "123456"
+      },
+      {
+        "id": 7,
+        "nombre": "JOHNY ALEJANDRO CARVAJAL ESTAY",
+        "username": "john.carvajal",
+        "password": "123456"
+      },
+      {
+        "id": 8,
+        "nombre": "JOSE PABLO CASAS MOYANO",
+        "username": "jo.casas",
+        "password": "123456"
+      },
+      {
+        "id": 9,
+        "nombre": "MARCOS ESTEBAN CEBALLOS ALARCON",
+        "username": "ma.ceballos",
+        "password": "123456"
+      },
+      {
+        "id": 10,
+        "nombre": "DANIEL IGNACIO CONTADOR BUSTOS",
+        "username": "dan.contador",
+        "password": "123456"
+      },
+      {
+        "id": 11,
+        "nombre": "MARCELO IGNACIO CONTRERAS GONZALEZ",
+        "username": "marc.contreras",
+        "password": "123456"
+      },
+      {
+        "id": 12,
+        "nombre": "ENZO DIEGO DIAZ ALVAREZ",
+        "username": "en.diaza",
+        "password": "123456"
+      },
+      {
+        "id": 13,
+        "nombre": "FELIPE EDUARDO FERNANDEZ MOREL",
+        "username": "fe.fernandez",
+        "password": "123456"
+      },
+      {
+        "id": 14,
+        "nombre": "JIMENA ISABEL GONZALEZ ACEITUNO",
+        "username": "jim.gonzalez",
+        "password": "123456"
+      },
+      {
+        "id": 15,
+        "nombre": "JOSE LUIS GONZALEZ ORTEGA",
+        "username": "jose.gonzalezo",
+        "password": "123456"
+      },
+      {
+        "id": 16,
+        "nombre": "FRANCO PAOLO HERNANDEZ RETAMAL",
+        "username": "fr.hernandez",
+        "password": "123456"
+      },
+      {
+        "id": 17,
+        "nombre": "ALONSO CRISTOBAL MELGAREJO INOCENCIO",
+        "username": "al.melgarejo",
+        "password": "123456"
+      },
+      {
+        "id": 18,
+        "nombre": "JAVIER IGNACIO MIRANDA TAPIA",
+        "username": "jav.mirandat",
+        "password": "123456"
+      },
+      {
+        "id": 19,
+        "nombre": "ABDEEL SALOMON MORALES LOPEZ",
+        "username": "ab.morales",
+        "password": "123456"
+      },
+      {
+        "id": 20,
+        "nombre": "NICOLAS IGNACIO MUJICA CORTES",
+        "username": "ni.mujicac",
+        "password": "123456"
+      },
+      {
+        "id": 21,
+        "nombre": "BASTIAN FELIPE MUÑOZ SILVA",
+        "username": "ba.munozs",
+        "password": "123456"
+      },
+      {
+        "id": 22,
+        "nombre": "FELIPE NEIRA MUNOZ",
+        "username": "fel.neiram",
+        "password": "123456"
+      },
+      {
+        "id": 23,
+        "nombre": "ALEJANDRO ESTEBAN PEÑA SCHAMPKE",
+        "username": "ale.penas",
+        "password": "123456"
+      },
+      {
+        "id": 24,
+        "nombre": "ALEXIS MARCELO PEREZ ROLDAN",
+        "username": "alexi.perezr",
+        "password": "123456"
+      },
+      {
+        "id": 25,
+        "nombre": "CAMILO IGNACIO PULGAR VEGA",
+        "username": "cami.pulgar",
+        "password": "123456"
+      },
+      {
+        "id": 26,
+        "nombre": "VICENTE OSVALDO RIVAS URRUTIA",
+        "username": "vi.rivas",
+        "password": "123456"
+      },
+      {
+        "id": 27,
+        "nombre": "JORGE ERASMO SEPULVEDA FARIAS",
+        "username": "jor.sepulvedaf",
+        "password": "123456"
+      },
+      {
+        "id": 28,
+        "nombre": "JORDAN MITCHEL URZUA ESCUDERO",
+        "username": "jo.urzua",
+        "password": "123456"
+      },
+      {
+        "id": 29,
+        "nombre": "YERKO JEREMY VERA CUEVAS",
+        "username": "ye.verac",
+        "password": "123456"
+      },
+      {
+        "id": 30,
+        "nombre": "DANITZA IVONNE ZUÑIGA HERNANDEZ",
+        "username": "da.zunigah",
+        "password": "123456"
+      } 
+    ]
+  }
