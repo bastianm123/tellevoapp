@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
-import { ToastController, LoadingController } from '@ionic/angular';
+import { ToastController, LoadingController, AlertController } from '@ionic/angular';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ServicesService } from '../services/services.service';
 import { Alumno } from '../ialumnos';
@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
     password: ""
   }
   field: string = "";
-  constructor(private router: Router, public toastController: ToastController, private loadingCtrl: LoadingController, private http: HttpClient, private api: ServicesService) {
+  constructor(private router: Router, public toastController: ToastController, private loadingCtrl: LoadingController, private http: HttpClient, private api: ServicesService,public alertController: AlertController,) {
   }
 
   async showLoading() {
@@ -84,8 +84,18 @@ export class LoginPage implements OnInit {
         this.correcto=true;
       }
       else{
+        this.presentAlert2()
         this.correcto=false;
       }
     });
+  }
+  async presentAlert2(){
+    const alert = await this.alertController.create({
+      message: "Los datos ingresados son incorrectos",
+      buttons: ["Ok"]
+    });
+    await alert.present()
+    let result = await alert.onDidDismiss()
+    console.log(result);
   }
 }
