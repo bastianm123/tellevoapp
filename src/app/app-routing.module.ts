@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -21,7 +22,8 @@ const routes: Routes = [
   },
   {
     path: 'conductor',
-    loadChildren: () => import('./conductor/conductor.module').then( m => m.ConductorPageModule)
+    loadChildren: () => import('./conductor/conductor.module').then( m => m.ConductorPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'splash',

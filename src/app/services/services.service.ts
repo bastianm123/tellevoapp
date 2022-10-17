@@ -16,7 +16,8 @@ export class ServicesService {
   }
   apiURL = `https://nancyb3a.github.io/Test/usuarios_PGY4121_01.json`;
   usuarios:any=[];
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+  }
 
   getUser(userId):Observable<any>{
     return this.http.get(this.apiURL+userId).pipe(
