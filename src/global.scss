@@ -29,4 +29,8 @@
 
 .inicio{
     font-family: 'Oswald', sans-serif;
+};
+.azul{
+    --color: rgb(2,0,36);
+    --background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,36,121,1) 41%, rgba(224,255,0,1) 100%);
 }

@@ -13,7 +13,7 @@ export class ConductorPage implements AfterViewInit {
   @ViewChild('square',{static: false}) square: ElementRef;
   isPlaying= false;
   constructor(private animationCtrl: AnimationController) {}
-  
+  nombre = localStorage.getItem("nombre");
   ngAfterViewInit() {
     this.anim = this.animationCtrl.create('myanim');
     this.anim
@@ -26,5 +26,8 @@ export class ConductorPage implements AfterViewInit {
   }
   ionViewDidEnter(){
     this.anim.play();
+  }
+  borrarData(){
+    localStorage.clear();
   }
 }

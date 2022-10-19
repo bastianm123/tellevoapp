@@ -1,12 +1,17 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="azul">
+    <ion-button color="light" style="float: right; font-size:10px;" routerLink="/login" (click)="borrarData()"><ion-icon  name="log-out-outline"></ion-icon></ion-button>
     <ion-title style="text-align: center;">
-      <h1>TellevoAPP<ion-button color="light" style="float: right; font-size:5px;" routerLink="/login"><ion-icon  name="log-out-outline"></ion-icon></ion-button></h1>
+      <h1>TellevoAPP</h1>
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true" class="background">
+  <p style="width: 270px;
+    margin-left:23px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;">Bievenido {{ nombre }}<p>
   <div class="content">
     <div class="button-action" style="text-align: center;">
       <ion-button fill="clear" color="dark" size="small" >

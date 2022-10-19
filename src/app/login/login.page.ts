@@ -38,6 +38,7 @@ export class LoginPage implements OnInit {
   ingresar() {
     if (this.validateModel(this.user)) {
       this.logForm()
+      this.loginStorage()
       console.log(this.alumno)
       if(this.correcto == true){
         this.presentToast("Bienvenido " + this.user.usuario)
@@ -74,7 +75,10 @@ export class LoginPage implements OnInit {
     });
     toast.present()
   }
-  
+  loginStorage(){
+    localStorage.setItem('nombre',this.alumno.nombre)
+    localStorage.setItem('password',this.alumno.password)
+  }
   logForm() {
     this.api.getUsuarios().subscribe(resp => {
       this.alumnos.push(...resp.alumnos);

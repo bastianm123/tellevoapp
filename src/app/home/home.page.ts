@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { AlertController, LoadingController, ToastController } from '@ionic/angular';
-import { Alumno } from '../ialumnos';
 import { ServicesService } from '../services/services.service';
 
 @Component({
@@ -9,6 +8,7 @@ import { ServicesService } from '../services/services.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  nombre = localStorage.getItem("nombre");
   user = {
     usuario: "",
     password: ""
@@ -27,6 +27,8 @@ export class HomePage {
     let result = await alert.onDidDismiss()
     console.log(result);
   }
-
+  borrarData(){
+    localStorage.clear();
+  }
 
 }

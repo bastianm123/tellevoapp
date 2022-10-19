@@ -1,15 +1,23 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title style="text-align: center;">
-      <h1>TellevoAPP<ion-button color="light" style="float: right; font-size:10px;" routerLink="/login"><ion-icon  name="log-out-outline"></ion-icon></ion-button></h1>
+  <ion-toolbar class="azul">
+    <ion-button color="light" style="float: right; font-size:10px;" routerLink="/login" (click)="borrarData()"><ion-icon  name="log-out-outline"></ion-icon></ion-button>
+    <ion-title>
+      <div>
+        <h1>TellevoAPP </h1>
+      </div>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="background">
+  <p style="width: 270px;
+    margin-left:23px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;">Bievenido {{ nombre }}<p>
   <div class="content">
     <div class="button-action" style="text-align: center;">
-      <ion-button fill="clear" color="dark" size="small" routerLink="/home" routerDirection="root">
+      <ion-button fill="clear" color="dark" size="small" routerLink="/home"  routerDirection="root">
         <b><p class="pasajero-text">Pasajero</p></b>
       </ion-button>
       <ion-button fill="clear" color="dark" size="small" >
@@ -20,8 +28,8 @@
   <ion-content>
     <ion-content role="feed">
       <ion-list>
-        <ion-button color="success" style="float: right; font-size:10px; margin-top:25px"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
-        <ion-button color="danger" style="float: right; font-size:10px; margin-top:25px"><ion-icon name="close-outline"></ion-icon></ion-button>
+        <ion-button color="success" routerLink="/e404" style="float: right; font-size:10px; margin-top:25px"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
+        <ion-button color="danger" routerLink="/e404" style="float: right; font-size:10px; margin-top:25px"><ion-icon name="close-outline"></ion-icon></ion-button>
         <ion-item role="article">
           <ion-row>
             <ion-col>
@@ -37,8 +45,8 @@
             </ion-col>
           </ion-row>
         </ion-item>
-        <ion-button color="success" style="float: right; font-size:10px;margin-top:25px"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
-        <ion-button color="danger" style="float: right; font-size:10px;margin-top:25px"><ion-icon name="close-outline"></ion-icon></ion-button>
+        <ion-button color="success" routerLink="/e404" style="float: right; font-size:10px;margin-top:25px"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
+        <ion-button color="danger" routerLink="/e404" style="float: right; font-size:10px;margin-top:25px"><ion-icon name="close-outline"></ion-icon></ion-button>
         <ion-item role="article">
           <ion-row>
             <ion-col>
@@ -54,8 +62,8 @@
             </ion-col>
           </ion-row>
         </ion-item>
-        <ion-button color="success" style="float: right; font-size:10px;margin-top:25px"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
-        <ion-button color="danger" style="float: right; font-size:10px;margin-top:25px"><ion-icon name="close-outline"></ion-icon></ion-button>
+        <ion-button color="success" routerLink="/e404" style="float: right; font-size:10px;margin-top:25px"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
+        <ion-button color="danger" routerLink="/e404" style="float: right; font-size:10px;margin-top:25px"><ion-icon name="close-outline"></ion-icon></ion-button>
         <ion-item role="article">
           <ion-row>
             <ion-col>
@@ -71,8 +79,8 @@
             </ion-col>
           </ion-row>
         </ion-item>
-        <ion-button color="success" style="float: right; font-size:10px;margin-top:25px"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
-        <ion-button color="danger" style="float: right; font-size:10px;margin-top:25px"><ion-icon name="close-outline"></ion-icon></ion-button>
+        <ion-button color="success" routerLink="/e404" style="float: right; font-size:10px;margin-top:25px"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
+        <ion-button color="danger" routerLink="/e404" style="float: right; font-size:10px;margin-top:25px"><ion-icon name="close-outline"></ion-icon></ion-button>
         <ion-item role="article">
           <ion-row>
             <ion-col>
