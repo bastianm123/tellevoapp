@@ -4,7 +4,6 @@
       <ion-button color="light" style="float: right; font-size:10px;margin-right:5px" routerLink="/login" (click)="borrarData()"><ion-icon  name="log-out-outline"></ion-icon></ion-button>
       <h1 class=".inicio" style="color:white">TellevoAPP</h1>
     </ion-title>
-    
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true" class="background">
@@ -29,20 +28,20 @@
   </div>
   <ion-item>
     <ion-label position="floating">Origen:</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="viaje.origen"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label position="floating">Destino:</ion-label>
-    <ion-input></ion-input>
+    <ion-label position="floating" >Destino:</ion-label>
+    <ion-input [(ngModel)]="viaje.destino"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label position="floating">Precio:</ion-label>
-    <ion-input></ion-input>
+    <ion-label position="floating" >Precio:</ion-label>
+    <ion-input [(ngModel)]="viaje.precio"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label>Metodo de pago:</ion-label>
+    <ion-label >Metodo de pago:</ion-label>
     <ion-list>
-    <ion-item>
+    <ion-item [(ngModel)]="viaje.pago">
       <ion-select placeholder="Efectivo">
         <ion-select-option value="apples">Efectivo</ion-select-option>
         <ion-select-option value="oranges">Tarjeta</ion-select-option>
@@ -52,6 +51,6 @@
   </ion-list>
   </ion-item>
   
-  <ion-button (click)="presentToast1()" color="success" expand="full">Publicar</ion-button>
+  <ion-button (click)="enviarViaje()" color="success" expand="full">Publicar</ion-button>
 </ion-content>
 
